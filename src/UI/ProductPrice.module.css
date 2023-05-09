@@ -1,0 +1,19 @@
+.product-price {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.product-price-tag-discount {
+  color: hsl(26, 100%, 55%);
+  background-color: hsl(25, 100%, 94%);
+  font-size: 0.6em;
+  margin: 0.6em;
+  padding: 0.1em 0.5em;
+  border-radius: 0.5em;
+}
+.product-price-discount {
+  text-decoration: line-through;
+  color: hsl(220, 14%, 75%);
+  font-size: 1em;
+}

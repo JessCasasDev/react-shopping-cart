@@ -1,0 +1,33 @@
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.image-gallery-main {
+  text-align: center;
+}
+.image-gallery-main > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.image-gallery-options {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 1em;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.image-gallery-option-image {
+  max-width: 100%;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+.image-gallery-option-image--selected {
+  opacity: 0.3;
+  border: 3px solid hsl(26, 100%, 55%);
+}

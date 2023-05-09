@@ -1,0 +1,15 @@
+.cart {
+  position: relative;
+}
+
+.cart-number {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  background: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  font-size: 0.75em;
+  font-weight: bold;
+  border-radius: 100%;
+  padding: 0.1em 0.4em;
+}

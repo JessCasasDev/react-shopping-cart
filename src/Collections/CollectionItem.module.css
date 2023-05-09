@@ -1,0 +1,16 @@
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  cursor: pointer;
+}
+.item-main {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.item-image img {
+  border-radius: 1rem;
+}
+

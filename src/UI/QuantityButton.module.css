@@ -1,0 +1,20 @@
+.quantity-button {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background: hsl(223, 64%, 98%);
+  border-radius: 1rem;
+  padding: 1rem;
+  max-height: 1rem;
+}
+
+.quantity-button--button {
+  background: transparent;
+  border-radius: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.quantity-button--quantity {
+  text-align: center;
+  font-weight: bold;
+}

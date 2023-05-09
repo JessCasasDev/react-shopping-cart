@@ -1,0 +1,7 @@
+.collections {
+  width: 70vw;
+  display: flex;
+  margin: 4em auto;
+  flex-direction: column;
+  gap: 2em;
+}

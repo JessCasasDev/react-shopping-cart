@@ -1,0 +1,25 @@
+.cart-summary__total {
+  width: 100%;
+}
+.cart-summary__total--title {
+  color: hsl(26, 100%, 55%);
+  font-size: 2.5em;
+  text-align: center;
+}
+
+.cart-summary__total--value {
+  font-weight: bold;
+  font-size: 2em;
+  text-align: center;
+}
+
+.cart-summary__total--button {
+  font-weight: bold;
+  background: hsl(26, 100%, 55%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 1em;
+  width: 100%;
+  padding: 1em;
+  cursor: pointer;
+  border: none;
+}
