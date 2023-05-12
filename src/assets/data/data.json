@@ -37,12 +37,12 @@
       "id": "product-2",
       "images": [
         {
-          "original": "image-product-5.jpg",
-          "thumbnail": "image-product-5-thumbnail.jpg"
-        },
-        {
           "original": "image-product-6.jpg",
           "thumbnail": "image-product-6-thumbnail.jpg"
+        },
+        {
+          "original": "image-product-5.jpg",
+          "thumbnail": "image-product-5-thumbnail.jpg"
         },
         {
           "original": "image-product-7.jpg",
@@ -75,12 +75,12 @@
       "id": "product-4",
       "images": [
         {
-          "original": "image-product-10.jpg",
-          "thumbnail": "image-product-10-thumbnail.jpg"
-        },
-        {
           "original": "image-product-9.jpg",
           "thumbnail": "image-product-9-thumbnail.jpg"
+        },
+        {
+          "original": "image-product-10.jpg",
+          "thumbnail": "image-product-10-thumbnail.jpg"
         }
       ]
     }
