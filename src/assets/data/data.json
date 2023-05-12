@@ -4,6 +4,7 @@
       "title": "Fall Limited Edition Sneakers",
       "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a    durable rubber outer sole, they’ll withstand everything the weather can offer.",
       "price": "$250.00",
+      "tags": ["women", "shoes", "discount"],
       "discountPercentage": "50%",
       "finalPrice": "$125.00",
       "id": "product-1",
@@ -27,28 +28,59 @@
       ]
     },
     {
-      "title": "Fall Limited Edition Sneakers",
-      "description": "These low-profile sneakers are your perfect casual wear companion. Featuring a    durable rubber outer sole, they’ll withstand everything the weather can offer.",
-      "price": "$250.00",
+      "title": "Classic Leather Handbag",
+      "description": "This classic leather handbag is both stylish and practical. It features multiple compartments and a detachable strap for versatile carrying options.",
+      "price": "$150.00",
+      "tags": ["women", "accessories", "leather"],
       "discountPercentage": null,
-      "finalPrice": "$250.00",
+      "finalPrice": "$150.00",
       "id": "product-2",
       "images": [
         {
-          "original": "image-product-1.jpg",
-          "thumbnail": "image-product-1-thumbnail.jpg"
+          "original": "image-product-5.jpg",
+          "thumbnail": "image-product-5-thumbnail.jpg"
         },
         {
-          "original": "image-product-2.jpg",
-          "thumbnail": "image-product-2-thumbnail.jpg"
+          "original": "image-product-6.jpg",
+          "thumbnail": "image-product-6-thumbnail.jpg"
         },
         {
-          "original": "image-product-3.jpg",
-          "thumbnail": "image-product-3-thumbnail.jpg"
+          "original": "image-product-7.jpg",
+          "thumbnail": "image-product-7-thumbnail.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Men's Slim Fit Jeans",
+      "description": "These slim fit jeans for men are designed for a modern and stylish look. Made from high-quality denim, they offer both comfort and durability.",
+      "price": "$80.00",
+      "tags": ["men", "jeans", "slim fit", "discount"],
+      "discountPercentage": "15%",
+      "finalPrice": "$68.00",
+      "id": "product-3",
+      "images": [
+        {
+          "original": "image-product-8.jpg",
+          "thumbnail": "image-product-8-thumbnail.jpg"
+        }
+      ]
+    },
+    {
+      "title": "Wireless Bluetooth Earphones",
+      "description": "Enjoy the freedom of wireless audio with these Bluetooth earphones. They provide high-quality sound and a comfortable fit for all-day listening.",
+      "price": "$50.00",
+      "tags": ["electronics", "audio", "wireless"],
+      "discountPercentage": null,
+      "finalPrice": "$50.00",
+      "id": "product-4",
+      "images": [
+        {
+          "original": "image-product-10.jpg",
+          "thumbnail": "image-product-10-thumbnail.jpg"
         },
         {
-          "original": "image-product-4.jpg",
-          "thumbnail": "image-product-4-thumbnail.jpg"
+          "original": "image-product-9.jpg",
+          "thumbnail": "image-product-9-thumbnail.jpg"
         }
       ]
     }

@@ -12,5 +12,8 @@
 }
 .item-image img {
   border-radius: 1rem;
-}
+  width: 176px;
+  height: 176px;
+  object-fit: cover;
+} 
 

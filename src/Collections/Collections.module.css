@@ -5,3 +5,45 @@
   flex-direction: column;
   gap: 2em;
 }
+
+.collections__filter-options {
+  width: 10vw;
+  min-width: 200px;
+  max-width: 10vw;
+  border-radius: 1em;
+  padding: 0.5em 1em;
+}
+.selected-tag--container {
+  display: flex;
+}
+.selected-tag {
+  background: hsl(26, 100%, 55%);
+  border: 0;
+  border-radius: 1em;
+  color: hsl(0, 0%, 100%);
+  padding: 0.5em 1em;
+  margin: 0 0.5em;
+  width: auto;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selected-tag button {
+  background: transparent;
+  border: 0;
+  color: hsl(0, 0%, 100%);
+  padding: 0;
+  cursor: pointer;
+  width: auto;
+  margin: 0 0 0 0.5em;
+  filter: brightness(3);
+}
+.selected-tag button img {
+  height: 0.8em;
+  width: 0.8em;
+  margin-top:0.5em;
+}
+.selected-tag:first-child {
+  margin: 0 0.5em 0 0;
+}

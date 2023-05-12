@@ -21,8 +21,6 @@ export const CartContextProvider = (props) => {
   const [totalPrice, setTotalPrice] = useState(0);
 
   useEffect(() => {
-    console.log("2");
-
     const totalProducts = cartList.reduce(
       (previousValue, currentValue) => currentValue.quantity + previousValue,
       0

@@ -7,11 +7,10 @@
   text-align: center;
 }
 .image-gallery-main > img {
-  width: 100%;
-  height: 100%;
   border-radius: 1rem;
-  max-height: 400px;
-  max-width: 400px;
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
 }
 
 .image-gallery-options {
@@ -26,6 +25,9 @@
   cursor: pointer;
   border-radius: 1rem;
   box-sizing: border-box;
+  height: 74px;
+  width: 74px;
+  object-fit: cover;
 }
 .image-gallery-option-image--selected {
   opacity: 0.3;
