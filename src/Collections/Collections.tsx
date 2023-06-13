@@ -37,7 +37,7 @@ export default function Collections() {
   };
 
   const addTagHandler = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const tag = (event.target as HTMLSelectElement).value;
+    const tag = event.target.value;
     if (!selectedTags.includes(tag) && tags.includes(tag)) {
       setSelectedTags((tags) => [...tags, tag]);
     }
