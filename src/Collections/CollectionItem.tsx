@@ -1,7 +1,14 @@
+import React from "react";
 import ProductPrice from "../UI/ProductPrice";
+import { Product } from "../utils/models/Product.model";
 import styles from "./CollectionItem.module.css";
 
-export default function CollectionItem({ item, onClick }) {
+type CollectionItemProp = {
+  item: Product;
+  onClick: (id: string) => void;
+};
+
+export default function CollectionItem({ item, onClick }: CollectionItemProp) {
   const image = require(`../assets/images/${item.images[0].thumbnail}`);
 
   const handleClick = () => {

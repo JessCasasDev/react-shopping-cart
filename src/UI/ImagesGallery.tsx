@@ -1,18 +1,22 @@
+import React from "react";
 import { useState } from "react";
+import { Images } from "../utils/models/Product.model";
 import styles from "./ImagesGallery.module.css";
 
-export default function ImagesGallery({ images }) {
-  const [mainPicture, setMainPicture] = useState(images[0].original);
-  const [imageSelectedIndex, setImageSelectedIndex] = useState(0);
-  
-  const changeImageHandler = (event) => {
-    const index = +event.target.id;
-    const image = images[index].original;
-    setImageSelectedIndex(index);
-    setMainPicture(image);
+export default function ImagesGallery({ images }: { images: Images[] }) {
+  const [mainPicture, setMainPicture] = useState<string>(images[0].original);
+  const [imageSelectedIndex, setImageSelectedIndex] = useState<number>(0);
+
+  const changeImageHandler = (event: React.MouseEvent<HTMLImageElement>) => {
+    if (event.target) {
+      const index = +(event.target as HTMLImageElement).id;
+      const image = images[index].original;
+      setImageSelectedIndex(index);
+      setMainPicture(image);
+    }
   };
 
-  function getImageClassNames(index) {
+  function getImageClassNames(index: number) {
     const ngClass =
       imageSelectedIndex === index
         ? styles["image-gallery-option-image--selected"]
@@ -27,9 +31,9 @@ export default function ImagesGallery({ images }) {
       </div>
       <div className={styles["image-gallery-options"]}>
         {images.map((image, i) => (
-          <div key={`image_${i}`}>
+          <div key={`image_${image.thumbnail}`}>
             <img
-              id={i}
+              id={`${i}`}
               onClick={changeImageHandler}
               className={getImageClassNames(i)}
               src={require(`../assets/images/${image.thumbnail}`)}

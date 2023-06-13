@@ -5,8 +5,9 @@ import styles from "./Header.module.css";
 import CartButton from "./CartButton";
 import UserProfileButton from "./UserProfileButton";
 import { Link } from "react-router-dom";
+import React from "react";
 
-const Header = (props) => {
+const Header = (props: { userImage: string }) => {
   const { userImage } = props;
 
   return (

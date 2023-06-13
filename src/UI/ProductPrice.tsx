@@ -1,7 +1,8 @@
+import React from "react";
+import { Product } from "../utils/models/Product.model";
 import styles from "./ProductPrice.module.css";
 
-export default function ProductPrice({product}) {
-    
+export default function ProductPrice({ product }: { product: Product }) {
   return (
     <div>
       <div className={styles["product-price"]}>

@@ -8,13 +8,17 @@ import ProductPrice from "../UI/ProductPrice";
 import QuantityButton from "../UI/QuantityButton";
 import { useContext, useState } from "react";
 import CartContext from "../store/cart-context";
+import { Product } from "../utils/models/Product.model";
+import React from "react";
 
-export function loader({ params }) {
-  const product = data.data.find((product) => product.id === params.productId);
+export function loader({ params }: any) {
+  const product = data.data.find(
+    (product: Product) => product.id === params.productId
+  );
   return { product };
 }
 export default function CollectionDetail() {
-  const { product } = useLoaderData();
+  const { product } = useLoaderData() as { product: Product };
   const [quantity, setQuantity] = useState(0);
   const cartContext = useContext(CartContext);
 

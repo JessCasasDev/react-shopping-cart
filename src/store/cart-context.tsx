@@ -1,24 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { PropsWithChildren, useEffect, useState } from "react";
 
 import data from "../assets/data/data.json";
 import { getPrice } from "../utils/functions/price";
+import { Cart } from "../utils/models/Cart.model";
+import { Product } from "../utils/models/Product.model";
 
-const initialCart = {
+export interface ICartContext {
+  cartList: Cart[];
+  addProduct: (id: string, quantity: number) => void;
+  changeQuantity: (id: string, quantity: number) => void;
+  removeProduct: (id: string) => void;
+  removeAllItems: () => void;
+  totalProductsOnCart: number;
+  totalPrice: number;
+}
+const initialCart: ICartContext = {
   cartList: [],
-  addProduct: (_id, _quantity) => {},
+  addProduct: (_id: string, _quantity: number) => {},
   changeQuantity: (_id, _quantity) => {},
   removeProduct: (_id) => {},
   removeAllItems: () => {},
   totalProductsOnCart: 0,
+  totalPrice: 0,
 };
 
 const CartContext = React.createContext(initialCart);
 
-export const CartContextProvider = (props) => {
-  const [collections, _setCollection] = useState(data.data);
-  const [cartList, setCartList] = useState([]);
-  const [totalProductsOnCart, setTotalProductsOnCart] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+export const CartContextProvider = (props: PropsWithChildren) => {
+  const [cartList, setCartList] = useState<Cart[]>([]);
+  const [totalProductsOnCart, setTotalProductsOnCart] = useState<number>(0);
+  const [totalPrice, setTotalPrice] = useState<number>(0);
 
   useEffect(() => {
     const totalProducts = cartList.reduce(
@@ -32,8 +43,8 @@ export const CartContextProvider = (props) => {
     setTotalPrice(total);
   }, [cartList]);
 
-  const addProductHandler = (id, quantity) => {
-    setCartList((cartList) => {
+  const addProductHandler = (id: string, quantity: number) => {
+    setCartList((cartList: Cart[]) => {
       if (quantity === 0) {
         return cartList;
       }
@@ -48,18 +59,21 @@ export const CartContextProvider = (props) => {
           ...cartList.slice(index + 1, cartList.length),
         ];
       } else {
-        const item = collections.find((item) => item.id === id);
-        const newItem = {
-          ...item,
-          quantity,
-        };
+        const item = data.data.find((item: Product) => item.id === id);
+        if (item) {
+          const newItem: Cart = {
+            ...item,
+            quantity,
+          };
+          return [...cartList, newItem];
+        }
 
-        return [...cartList, newItem];
+        return [...cartList];
       }
     });
   };
 
-  const changeQuantityHandler = (id, quantity) => {
+  const changeQuantityHandler = (id: string, quantity: number) => {
     setCartList((cartList) => {
       const index = cartList.findIndex((item) => item.id === id);
       if (index > -1) {
@@ -81,7 +95,7 @@ export const CartContextProvider = (props) => {
     });
   };
 
-  const removeProductHandler = (id) => {
+  const removeProductHandler = (id: string) => {
     setCartList((cartList) => cartList.filter((item) => item.id !== id));
   };
 

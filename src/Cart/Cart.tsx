@@ -8,6 +8,7 @@ import { Navigate } from "react-router-dom";
 import QuantityButton from "../UI/QuantityButton";
 import styles from "./Cart.module.css";
 import trashIcon from "../assets/images/icon-delete.svg";
+import React from "react";
 
 export default function Cart() {
   const {
@@ -23,15 +24,15 @@ export default function Cart() {
     setTotalValue(renderPrice(totalPrice));
   }, [totalPrice]);
 
-  const handleNavigate = (id) => {
-    Navigate(`/collections/${id}`);
+  const handleNavigate = (id: string) => {
+    Navigate({ to: `/collections/${id}` });
   };
 
-  const increaseHandler = (id) => {
+  const increaseHandler = (id: string) => {
     changeQuantity(id, 1);
   };
 
-  const decreaseHandler = (id) => {
+  const decreaseHandler = (id: string) => {
     changeQuantity(id, -1);
   };
 
